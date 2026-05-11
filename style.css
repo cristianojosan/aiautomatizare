@@ -101,6 +101,12 @@ a {
   cursor: pointer;
 }
 
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .button.secondary {
   color: var(--primary);
   background: white;
@@ -427,6 +433,69 @@ textarea {
 .small {
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.form-success {
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+}
+
+.form-success.is-visible {
+  animation: formSuccessIn 0.45s ease-out;
+}
+
+@keyframes formSuccessIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-success-inner {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, rgba(0, 167, 255, 0.08), rgba(54, 224, 255, 0.14));
+  border: 1px solid rgba(0, 167, 255, 0.38);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 36px rgba(11, 31, 77, 0.08);
+}
+
+.form-success-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1;
+  background: linear-gradient(145deg, #059669, #10b981);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.35);
+}
+
+.form-success-icon::before {
+  content: "✓";
+}
+
+.form-success h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.form-success p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
 }
 
 @media (max-width: 860px) {

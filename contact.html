@@ -44,15 +44,26 @@
 
         <section class="card">
           <h2>Formular solicitare demo</h2>
-          <p class="small">Acest formular este static. Pentru Google Sites îl poți înlocui cu Google Forms, iar pentru un site publicat separat îl poți conecta la un serviciu de formulare.</p>
-          <form class="form" action="mailto:josangheorghe37@gmail.com" method="post" enctype="text/plain">
+          <p class="small">După „Trimite solicitarea”, confirmă trimiterea în clientul de email dacă se deschide automat.</p>
+
+          <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+            <div class="form-success-inner">
+              <span class="form-success-icon" aria-hidden="true"></span>
+              <div>
+                <h3 tabindex="-1">Mesaj trimis cu succes</h3>
+                <p>Mulțumim! Datele tale au fost pregătite pentru contact. Dacă tocmai ți s-a deschis aplicația de email, apasă „Trimite” acolo pentru a finaliza.</p>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="form" action="#" method="get" novalidate>
             <label>
               Nume
-              <input type="text" name="nume" placeholder="Numele tău" required>
+              <input type="text" name="nume" placeholder="Numele tău" required autocomplete="name">
             </label>
             <label>
               Email
-              <input type="email" name="email" placeholder="email@companie.ro" required>
+              <input type="email" name="email" placeholder="email@companie.ro" required autocomplete="email">
             </label>
             <label>
               Tip business
@@ -109,5 +120,60 @@
       </nav>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var successBox = document.getElementById("form-success");
+      if (!form || !successBox) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        successBox.hidden = false;
+        successBox.classList.add("is-visible");
+        successBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+        var title = successBox.querySelector("h3");
+        if (title) {
+          title.focus({ preventScroll: true });
+        }
+
+        var fd = new FormData(form);
+        var name = String(fd.get("nume") || "").trim();
+        var email = String(fd.get("email") || "").trim();
+        var tip = String(fd.get("tip-business") || "");
+        var mesaj = String(fd.get("mesaj") || "");
+
+        var subject = "Solicitare demo — " + name;
+        var body =
+          "Nume: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Tip business: " + tip + "\n\n" +
+          "Mesaj:\n" + mesaj;
+
+        var mailto =
+          "mailto:josangheorghe37@gmail.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+
+        window.setTimeout(function () {
+          window.location.href = mailto;
+        }, 450);
+
+        window.setTimeout(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        }, 3000);
+      });
+    })();
+  </script>
 </body>
 </html>
