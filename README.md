@@ -22,7 +22,7 @@ Acest folder conține un website static complet pentru un serviciu AI destinat a
 - Compania setată în site: `GHEORGHE JOSANU`.
 - Adresa setată în site: `s. Noroceni, rl. Orhei`.
 - `josangheorghe37@gmail.com` este emailul de contact folosit în site.
-- `+37360111482` este numărul de telefon/WhatsApp folosit în site.
+- `+37369675702` este numărul de telefon/WhatsApp folosit în site.
 
 Important: pentru Meta Business Verification, numele companiei, adresa, domeniul, emailul și datele din documente trebuie să fie consistente.
 
