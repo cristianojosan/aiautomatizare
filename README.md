@@ -1,6 +1,6 @@
-# AI Automatizări Imobiliare - website pentru Meta Review
+# Î. I. GHEORGHE JOSANU — website pentru Meta Review
 
-Acest folder conține un website static complet pentru un serviciu AI destinat agenților imobiliari. Site-ul este gândit pentru credibilitate business, Meta/Facebook App Review și Business Verification.
+Acest folder conține un website static complet pentru serviciul AI oferit de Î. I. GHEORGHE JOSANU către agenți imobiliari. Pagina Messenger publică este asociată numelui „AI Automatizări Moldova”. Site-ul este gândit pentru credibilitate business, Meta/Facebook App Review și Business Verification.
 
 ## Fișiere incluse
 
@@ -18,13 +18,13 @@ Acest folder conține un website static complet pentru un serviciu AI destinat a
 Înlocuiește toate valorile placeholder:
 
 - `https://exemplu.ro` cu domeniul real.
-- `AI Automatizări Imobiliare` cu numele real al brandului, dacă este diferit.
-- Compania setată în site: `GHEORGHE JOSANU`.
+- Denumire legală utilizată peste tot în HTML: `Î. I. GHEORGHE JOSANU`.
+- Pagina Facebook menționată în Privacy Policy: `AI Automatizări Moldova` (dacă numele oficial al paginii diferă, actualizează în `privacy-policy.html`).
 - Adresa setată în site: `s. Noroceni, rl. Orhei`.
 - `josangheorghe37@gmail.com` este emailul de contact folosit în site.
 - `+37369675702` este numărul de telefon/WhatsApp folosit în site.
 
-Important: pentru Meta Business Verification, numele companiei, adresa, domeniul, emailul și datele din documente trebuie să fie consistente.
+Important: pentru Meta Business Verification, denumirea **Î. I. GHEORGHE JOSANU**, adresa, domeniul, emailul și datele din documente trebuie să fie consistente.
 
 ## Structura recomandată pentru Google Sites
 
@@ -63,7 +63,7 @@ Headline:
 
 Subheadline:
 
-`AI Automatizări Imobiliare ajută agenții imobiliari să răspundă rapid clienților interesați, să colecteze preferințe relevante și să transmită agentului un lead mai clar, mai organizat și mai ușor de preluat.`
+`Î. I. GHEORGHE JOSANU oferă un asistent AI care ajută agenții imobiliari să răspundă rapid clienților interesați, să colecteze preferințe relevante și să transmită agentului un lead mai clar, mai organizat și mai ușor de preluat.`
 
 CTA principal:
 
@@ -155,7 +155,7 @@ Meta va căuta claritate, transparență și conformitate. Cele mai importante e
 
 ## Recomandări pentru App Review submission
 
-În descrierea aplicației Facebook Developer, poți folosi o formulare de tip:
+În descrierea aplicației Facebook Developer poți preciza că serviciul este operat de **Î. I. GHEORGHE JOSANU** (Pagina „AI Automatizări Moldova”). Formula de bază poate fi:
 
 `Aplicația conectează pagina de Facebook a unei agenții imobiliare la un asistent AI care răspunde conversațiilor inițiate de utilizatori în Messenger. AI-ul informează utilizatorul că este un sistem automat, colectează preferințe imobiliare precum buget, zonă și număr de camere, apoi transmite agentului un rezumat al lead-ului calificat. Aplicația nu trimite spam și nu contactează persoane care nu au inițiat conversația. Utilizatorii pot opri conversația oricând sau pot cere ștergerea datelor.`
 
